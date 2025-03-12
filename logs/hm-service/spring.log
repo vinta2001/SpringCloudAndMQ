@@ -1,0 +1,8 @@
+00:42:40:811  INFO 4280 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 17.0.10 on LAPTOP-REOUTHKF with PID 4280 (D:\Development_Tools\learning-project\hmall-cloud\hmall\hm-service\target\classes started by VINTA in D:\Development_Tools\learning-project\hmall-cloud\hmall)
+00:42:40:819 DEBUG 4280 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+00:42:40:820  INFO 4280 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+00:42:42:099  INFO 4280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+00:42:42:104  INFO 4280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+00:42:42:152  INFO 4280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+00:42:43:199  INFO 4280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+00:42:43:429  INFO 4280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2529 ms

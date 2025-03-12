@@ -1,0 +1,9 @@
+com\hmall\api\feign\ItemFeign.class
+com\hmall\api\dto\ItemDTO.class
+com\hmall\api\dto\OrderDetailDTO.class
+com\hmall\api\feign\CartFeign.class
+com\hmall\api\dto\OrderFormDTO.class
+com\hmall\api\conf\OpenFeignConf.class
+com\hmall\api\enums\PayStatus.class
+com\hmall\api\feign\OrderFeign.class
+com\hmall\api\feign\UserFeign.class

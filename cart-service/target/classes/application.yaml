@@ -1,0 +1,22 @@
+server:
+  port: 8082
+feign:
+  okhttp:
+    enabled: true
+hm:
+  db:
+    database: hm-cart
+    host: 47.96.117.5
+    pw: 123
+    port: 3306
+  swagger:
+    title: 黑马商城购物车文档
+    desc: 黑马商城购物车文档
+    package: com.hmall.cart.controller
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true
+

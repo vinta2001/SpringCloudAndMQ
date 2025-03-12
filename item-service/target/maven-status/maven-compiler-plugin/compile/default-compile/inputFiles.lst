@@ -1,0 +1,9 @@
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\domain\query\ItemPageQuery.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\mapper\ItemMapper.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\domain\dto\ItemDTO.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\domain\dto\OrderDetailDTO.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\controller\ItemController.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\ItemApplication.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\service\IItemService.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\domain\po\Item.java
+D:\Development_Tools\learning-project\hmall-cloud\hmall\item-service\src\main\java\com\hmall\item\service\Impl\ItemServiceImpl.java
