@@ -412,8 +412,7 @@ public class MQConfig {
 }
 ```
 - ConfirmCallback
-发送消息，指定消息ID、消息`ConfirmCallback`
-confirmCallback是
+发送消息，指定消息ID、消息`ConfirmCallback`。通过实现 ConfirmCallback 接口，消息发送到 Broker 后触发回调，确认消息是否到达 Broker 服务器，也就是只确认是否正确到达 Exchange 中
 ```java
 @Test
 public void testSimpleQueue() throws InterruptedException {  
