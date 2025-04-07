@@ -387,6 +387,7 @@ spring:
 - 为每一个`RabbitTemplate`配置一个`ReturnCallback`，因此需要在项目启动过程中配置
 
 returnCallback是消息投递到了MQ，但是路由失败，此时会回调returnCallback，但是会返回`ACK`。
+- 使用方式一
 ```java
   
 @Slf4j  
@@ -411,8 +412,33 @@ public class MQConfig {
     }
 }
 ```
+- 使用方式二
+```java
+@Component
+public class RabbitTemplateConfig implements RabbitTemplate.ReturnCallback{
+ 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+ 
+    @PostConstruct
+    public void init(){
+        rabbitTemplate.setReturnCallback(this);             //指定 ReturnCallback
+    }
+ 
+    @Override
+    public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
+        System.out.println("消息主体 message : "+message);
+        System.out.println("消息主体 message : "+replyCode);
+        System.out.println("描述："+replyText);
+        System.out.println("消息使用的交换器 exchange : "+exchange);
+        System.out.println("消息使用的路由键 routing : "+routingKey);
+    }
+}
+```
+
 - ConfirmCallback
 发送消息，指定消息ID、消息`ConfirmCallback`。通过实现 ConfirmCallback 接口，消息发送到 Broker 后触发回调，确认消息是否到达 Broker 服务器，也就是只确认是否正确到达 Exchange 中
+- 使用方式一
 ```java
 @Test
 public void testSimpleQueue() throws InterruptedException {  
@@ -441,6 +467,27 @@ public void testSimpleQueue() throws InterruptedException {
     Thread.sleep(5000);  
 }
 ```
+- 使用方式二
+```java
+@Component
+public class RabbitTemplateConfig implements RabbitTemplate.ConfirmCallback{
+ 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+ 
+    @PostConstruct
+    public void init(){
+        rabbitTemplate.setConfirmCallback(this);            //指定 ConfirmCallback
+    }
+ 
+    @Override
+    public void confirm(CorrelationData correlationData, boolean ack, String cause) {
+        System.out.println("消息唯一标识："+correlationData);
+        System.out.println("确认结果："+ack);
+        System.out.println("失败原因："+cause);
+    }
+```
+
 ## MQ可靠性
 ### 宕机问题
 队列持久化+交换机持久化+消息持久化=MQ高可靠
